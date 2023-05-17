@@ -1,0 +1,11 @@
+/src/components/container es para meter componentes que renderizan otros componentes de más bajo nivel.
+/src/components/pure/forms tiene componentes relacionados con formularios.
+/src/hooks tiene hooks personalizados o haremos alguna lógica con los hooks.
+/src/routes especifica qué carpeta va a cada componente. Es como el árbol de páginas.
+/src/pages tiene archivos JSX que rendericen una página a la que podamos navegar.
+/src/pages/home tiene la home page.
+/src/pages/auth es la autenticación (login, cambio de contraseña, registro, etc).
+/src/pages/404 tiene páginas de ruta inadecuada, es decir, páginas de error.
+/src/models contiene datos o tipos de datos con los que vamos a trabajar.
+
+Cualquier modificación de las component properties en la consola Javascript de Components (Google Chrome) supone una recarga del componente y los cambios consecuentes.

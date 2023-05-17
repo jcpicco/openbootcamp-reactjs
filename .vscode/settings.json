@@ -1,3 +1,5 @@
 {
-    "explorer.compactFolders": false
+    "explorer.compactFolders": false,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on"
 }
