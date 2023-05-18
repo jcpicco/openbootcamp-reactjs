@@ -6,6 +6,7 @@ import TaskComponent from '../pure/taskComponent';
 
 const TaskListComponent = () => {
     const defaultTask = new Task("Ejemplo", "Descripción por defecto", false, LEVELS.NORMAL);
+    // eslint-disable-next-line
     const changeState = (id) => {
         console.log("TODO: Cambiar estado de una tarea");
     }

@@ -1,0 +1,6 @@
+.editorconfig sirve para editar parámetros del entorno de desarrollo.
+
+Todos los hooks empiezan por "use" (useState, useCallback, etc). Los hooks son funciones a usar dentro de los componentes.
+Se pueden crear hooks custom para realizar funcionalidades específicas, tales como comprobar que un usuario esté conectado o no.
+
+Podemos usar el factor de propagación (...) para mantener datos iguales en los set del hook useState().

@@ -1,6 +1,7 @@
 Creamos /components/pure dentro de /src. Ahí metemos componentes que no sean muy grandes.
 
 La extensión JSX es para interfaz de React.
+Los nombres de los componentes empiezan con una mayúscula.
 Dentro de una clase componente hay un método render() que combina contenido Javascript con contenido HTML.
 Los propTypes son el contenido que le puedo pasar a un componente desde un componente de orden superior.
 No podemos devolver más de un elemento en un componente (solamente puede haber un elemento <div>).
