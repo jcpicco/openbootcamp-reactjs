@@ -4,3 +4,4 @@ Todos los hooks empiezan por "use" (useState, useCallback, etc). Los hooks son f
 Se pueden crear hooks custom para realizar funcionalidades específicas, tales como comprobar que un usuario esté conectado o no.
 
 Podemos usar el factor de propagación (...) para mantener datos iguales en los set del hook useState().
+Si a useEffect() le ponemos los corchetes en blanco ([]), este se va a ejecutar una sola vez.

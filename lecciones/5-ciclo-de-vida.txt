@@ -1,0 +1,4 @@
+Algunas funciones: componentDidMount, componentDidUpdate y componentWillUnmount, que concuerdan con los tres estados: mounting, updating y unmounting.
+La actualización de la vista depende de la adición de nuevas props, de un setState() o forzando la actualización con forceUpdate().
+
+Deberíamos tener un solo useEffect() por componente.
