@@ -8,6 +8,7 @@ import ExampleUseState from './hooks/ExampleUseState';
 import ExampleVariousUse from './hooks/ExampleVariousUse';
 import ExampleUseContext from './hooks/ExampleUseContext';
 import ExampleChildrenProps from './hooks/ExampleChildrenProps';
+import Greetingstyled from './components/pure/greetingStyled';
 /* eslint-enable */
 
 function App() {
@@ -26,12 +27,13 @@ function App() {
           {/* <ExampleUseState></ExampleUseState> */}
           {/* <ExampleVariousUse></ExampleVariousUse> */}
           {/* <ExampleUseContext></ExampleUseContext> */}
-          <ExampleChildrenProps nombre="Martín">
+          {/* <ExampleChildrenProps nombre="Martín"> */}
             {/* Todo lo que hay aquí, es tratado como props.children */}
-            <h3>
+            {/* <h3>
               Contenido del props.children
             </h3>
-          </ExampleChildrenProps>
+          </ExampleChildrenProps> */}
+          <Greetingstyled name="Juanma"></Greetingstyled>
         </p>
       </header>
     </div>

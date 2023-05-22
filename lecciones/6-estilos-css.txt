@@ -1,0 +1,8 @@
+Para estilos podemos utilizar tanto CSS como preprocesadores SCSS y SASS.
+
+Nos situamos en la carpeta del proyecto y hacemos $npm install --save node-sass
+/src/styles contiene las hojas de estilo.
+
+$npm install bootstrap --save
+
+Si no tenemos carpeta node-modules en un proyecto hacemos $npm i en la carpeta del proyecto y se instalan todos los paquetes de nuevo.

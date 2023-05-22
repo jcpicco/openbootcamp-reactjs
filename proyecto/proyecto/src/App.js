@@ -2,6 +2,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ContactCoreComponent from './components/container/ContactCoreComponent';
+import Clock from './components/pure/clock';
 /* eslint-enable */
 
 function App() {
@@ -11,9 +12,11 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           {/* Componente lista de tasks */}
-          <ContactCoreComponent name="Juanma" last_name="Consigliere" email="jcpiccodev@gmail.com" connected={ false }></ContactCoreComponent>
+          {/* <ContactCoreComponent name="Juanma" last_name="Consigliere" email="jcpiccodev@gmail.com" connected={ false }></ContactCoreComponent> */}
         </p>
       </header>
+      {/* Componente reloj (ciclo de vida) */}
+      <Clock></Clock>
     </div>
   );
 }
