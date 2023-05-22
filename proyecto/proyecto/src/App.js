@@ -13,10 +13,10 @@ function App() {
         <p>
           {/* Componente lista de tasks */}
           {/* <ContactCoreComponent name="Juanma" last_name="Consigliere" email="jcpiccodev@gmail.com" connected={ false }></ContactCoreComponent> */}
+          {/* Componente reloj (ciclo de vida) */}
+          <Clock></Clock>
         </p>
       </header>
-      {/* Componente reloj (ciclo de vida) */}
-      <Clock></Clock>
     </div>
   );
 }
