@@ -1,0 +1,1 @@
+Un evento puede ocurrir o en el padre o en el hijo. Es importante comunicar el padre y el hijo y saber decir a un componente hijo qué tiene que ejecutar del padre.

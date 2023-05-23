@@ -1,0 +1,7 @@
+$npm install bootstrap --save
+https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+data-mdb-perfect-scrollbar='true' nos pone una scrollbar cuando el texto no entra. Es un atributo de HTML.
+
+$npm install bootstrap-icons --save
+https://icons.getbootstrap.com/
