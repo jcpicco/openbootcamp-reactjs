@@ -9,6 +9,7 @@ import ExampleVariousUse from './hooks/ExampleVariousUse';
 import ExampleUseContext from './hooks/ExampleUseContext';
 import ExampleChildrenProps from './hooks/ExampleChildrenProps';
 import Greetingstyled from './components/pure/greetingStyled';
+import Father from './components/container/father';
 /* eslint-enable */
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         {/* Componente propio greetingFunction.jsx con propiedades */}
         {/* <GreetingFunction name="Juanma"></GreetingFunction> */}
         {/* Componente lista de tasks */}
-      <TaskListComponent></TaskListComponent>
+        {/* <TaskListComponent></TaskListComponent> */}
         {/* Ejemplos de uso de HOOKS */}
         {/* <ExampleUseState></ExampleUseState> */}
         {/* <ExampleVariousUse></ExampleVariousUse> */}
@@ -34,6 +35,8 @@ function App() {
         </ExampleChildrenProps> */}
         {/* <Greetingstyled name="Juanma"></Greetingstyled> */}
       {/* </header> */}
+      {/* Gestión de eventos */}
+      <Father></Father>
     </div>
   );
 }
