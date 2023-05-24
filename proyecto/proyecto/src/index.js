@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+// Añadimos Bootstrap a nuestro proyecto
+import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap-icons/font/bootstrap-icons.json';
+
+// IMPORTANTE: Los estilos propios deben ir debajo de Bootstrap para que no los pise
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -7,6 +13,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"></link>
     <App />
   </React.StrictMode>
 );
