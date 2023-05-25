@@ -1,0 +1,6 @@
+"Suspend" es para suspender un componente y no hacer ningún cambio.
+El escarabajo es para depurar, pero necesita de breakpoints.
+El icono "<>" es para encontrar el archivo origen.
+
+En "Watch" añadimos las expresiones Javascript o variables que queremos estar escuchando. Es una manera simple para ver valores de variables.
+Los event listener breakpoints son acciones que triggerean breakpoints. Si ponemos el de click cada vez que hagamos click se generará un punto de ruptura.
