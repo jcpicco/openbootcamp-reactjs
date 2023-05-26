@@ -22,7 +22,7 @@ function App() {
         {/* Componente propio greetingFunction.jsx con propiedades */}
         {/* <GreetingFunction name="Juanma"></GreetingFunction> */}
         {/* Componente lista de tasks */}
-        <TaskListComponent></TaskListComponent>
+        {/* <TaskListComponent></TaskListComponent> */}
         {/* Ejemplos de uso de HOOKS */}
         {/* <ExampleUseState></ExampleUseState> */}
         {/* <ExampleVariousUse></ExampleVariousUse> */}
@@ -37,6 +37,8 @@ function App() {
       {/* </header> */}
       {/* Gestión de eventos */}
       {/* <Father></Father> */}
+      {/* Ejemplos de renderizado condicional */}
+      
     </div>
   );
 }
