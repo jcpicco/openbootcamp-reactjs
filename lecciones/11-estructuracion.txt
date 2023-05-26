@@ -1,0 +1,4 @@
+La vista son las páginas.
+Los componentes ya sabemos lo que son.
+El modelo es la app entera con sus estados.
+Los datos es con lo que trabajamos.

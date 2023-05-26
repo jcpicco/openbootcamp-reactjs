@@ -1,0 +1,1 @@
+Las iteraciones para mostrar elementos son renderizados condicionales.
