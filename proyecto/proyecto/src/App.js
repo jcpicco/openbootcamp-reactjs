@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ContactCoreComponent from './components/container/ContactCoreComponent';
 import Clock from './components/pure/clock';
+import MouseComponent from './components/pure/mouseComponent';
 /* eslint-enable */
 
 function App() {
@@ -16,8 +17,9 @@ function App() {
           {/* Componente reloj (ciclo de vida) */}
           {/* <Clock></Clock> */}
         </p>
-      <ContactCoreComponent></ContactCoreComponent>
+      {/* <ContactCoreComponent></ContactCoreComponent> */}
       {/* </header> */}
+      <MouseComponent></MouseComponent>
     </div>
   );
 }

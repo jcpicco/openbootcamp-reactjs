@@ -93,7 +93,7 @@ const TaskListComponent = () => {
                                         </TaskComponent>
                                     )
                                 }
-                            )}
+                            ) }
                         </tbody>
                     </table>
                 </div>

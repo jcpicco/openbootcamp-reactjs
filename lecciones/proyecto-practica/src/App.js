@@ -10,6 +10,7 @@ import ExampleUseContext from './hooks/ExampleUseContext';
 import ExampleChildrenProps from './hooks/ExampleChildrenProps';
 import Greetingstyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
+import OptionalRender from './components/pure/optionalRender';
 /* eslint-enable */
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
       {/* Gestión de eventos */}
       {/* <Father></Father> */}
       {/* Ejemplos de renderizado condicional */}
-      
+      <OptionalRender></OptionalRender>
     </div>
   );
 }
