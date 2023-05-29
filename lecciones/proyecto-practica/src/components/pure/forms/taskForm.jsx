@@ -4,7 +4,7 @@ import { LEVELS } from '../../../models/levels.enum';
 import { Task } from '../../../models/task.class';
 
 
-const Taskform = ({add}) => {
+const Taskform = ({add, length}) => {
     const nameRef = useRef('');
     const descriptionRef = useRef('');
     const levelRef = useRef(LEVELS.NORMAL);
@@ -21,6 +21,27 @@ const Taskform = ({add}) => {
         add(newTask);
     }
 
+    const normalStyle = {
+        backgroundColor: 'blue',
+        color: 'white',
+        fontWeight: 'bold'
+    };
+
+    
+    const urgentStyle = {
+        backgroundColor: 'yellow',
+        color: 'white',
+        fontWeight: 'bold'
+    };
+
+    
+    const blockingStyle = {
+        backgroundColor: 'red',
+        color: 'white',
+        fontWeight: 'bold'
+    };
+
+
     /**
      * - Muy importante poner IDs a los labels.
      * - Todas las className son de Bootstrap, y definen el estilo.
@@ -31,8 +52,8 @@ const Taskform = ({add}) => {
             <div className='form-outline flex-fill'>
                 <input ref={nameRef} id='inputName' type='text' className='form-control form-control-lg' required autoFocus placeholder='Task Name'/>
                 <input ref={descriptionRef} id='inputDescription' type='text' className='form-control form-control-lg' required placeholder='Task description'/>
-                <label htmlFor='selectLevel' className='sr-only'>Priority</label>
-                <select ref={levelRef} defaultValue={LEVELS.NORMAL} id='selectLevel'>
+                {/* TODO: Cambiar estilo dependiendo del nivel */}
+                <select ref={levelRef} defaultValue={LEVELS.NORMAL} id='selectLevel' className='form-control form-control-lg' style={ normalStyle }>
                     <option value={LEVELS.NORMAL}>
                         Normal
                     </option>
@@ -43,8 +64,10 @@ const Taskform = ({add}) => {
                         Blocking
                     </option>
                 </select>
+                <button type='submit' className='btn btn-success btn-lg ms-2'>
+                    {length > 0 ? 'Add new task' : 'Create your first task'}
+                </button>
             </div>
-            <button type='submit' className='btn btn-success btn-lg ms-2'>Add</button>
         </form>
 
     );
@@ -52,7 +75,8 @@ const Taskform = ({add}) => {
 
 
 Taskform.protoTypes = {
-    add: PropTypes.func.isRequired
+    add: PropTypes.func.isRequired,
+    length: PropTypes.number.isRequired
 }
 
 export default Taskform;

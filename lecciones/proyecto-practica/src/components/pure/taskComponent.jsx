@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+
+// Models
 import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enum';
 
@@ -59,9 +61,20 @@ const TaskComponent = ({ task, complete, remove }) => {
         }
     }
 
+    /**
+     * Code block that adds task completed and pending style
+     */
+    let tableClass = 'fw-normal'; // fw es el font-weight
+
+    if (task.completed) {
+        tableClass += ' task-completed';
+    } else {
+        tableClass += ' task-pending';
+    }
+
 
     return (
-        <tr className='fw-normal'>{/* fw es el font-weight */}
+        <tr className={ tableClass }>
             <th>
                 <span className='ms-2'>{task.name}</span> {/* ms-2 es el margin */}
             </th>
