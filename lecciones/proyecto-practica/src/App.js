@@ -11,6 +11,7 @@ import ExampleChildrenProps from './hooks/ExampleChildrenProps';
 import Greetingstyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
+import Loginformik from './components/pure/forms/loginFormik';
 /* eslint-enable */
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         {/* Componente propio greetingFunction.jsx con propiedades */}
         {/* <GreetingFunction name="Juanma"></GreetingFunction> */}
         {/* Componente lista de tasks */}
-        <TaskListComponent></TaskListComponent>
+        {/* <TaskListComponent></TaskListComponent> */}
         {/* Ejemplos de uso de HOOKS */}
         {/* <ExampleUseState></ExampleUseState> */}
         {/* <ExampleVariousUse></ExampleVariousUse> */}
@@ -40,6 +41,7 @@ function App() {
       {/* <Father></Father> */}
       {/* Ejemplos de renderizado condicional */}
       {/* <OptionalRender></OptionalRender> */}
+      <Loginformik></Loginformik>
     </div>
   );
 }

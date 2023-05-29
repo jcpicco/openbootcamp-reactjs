@@ -1,0 +1,7 @@
+Formik sirve para crear formularios con funcionalidades útiles.
+$npm install --save formik
+YUP es un generador de esquemas para analizar y validar valores en tiempo de ejecución.
+$npm install --save yup
+Material UI es para crear componentes con estilos definidos (para facilitar desarrollo).
+$npm install --save @material-ui/core
+
