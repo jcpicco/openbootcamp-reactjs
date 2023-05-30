@@ -4,6 +4,7 @@ import './App.css';
 import ContactCoreComponent from './components/container/ContactCoreComponent';
 import Clock from './components/pure/clock';
 import MouseComponent from './components/pure/mouseComponent';
+import TaskListComponent from './components/container/taskListComponent';
 /* eslint-enable */
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         </p>
       {/* <ContactCoreComponent></ContactCoreComponent> */}
       {/* </header> */}
-      <MouseComponent></MouseComponent>
+      {/* <MouseComponent></MouseComponent> */}
+      <TaskListComponent></TaskListComponent>
     </div>
   );
 }
