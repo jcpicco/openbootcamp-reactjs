@@ -11,7 +11,7 @@ import ExampleChildrenProps from './hooks/ExampleChildrenProps';
 import Greetingstyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
-import Loginformik from './components/pure/forms/loginFormik';
+import LoginFormik from './components/pure/forms/loginFormik';
 import Registerformik from './components/pure/forms/registerFormik';
 /* eslint-enable */
 

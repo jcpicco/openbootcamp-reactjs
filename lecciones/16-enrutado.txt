@@ -1,1 +1,3 @@
 $npm install --save react-router-dom
+
+NUNCA mandar contraseñas por query params. Es muy poco seguro.
