@@ -43,7 +43,7 @@ function App() {
       {/* Ejemplos de renderizado condicional */}
       {/* <OptionalRender></OptionalRender> */}
       {/* <Loginformik></Loginformik> */}
-      <Registerformik></Registerformik>
+      {/* <Registerformik></Registerformik> */}
     </div>
   );
 }

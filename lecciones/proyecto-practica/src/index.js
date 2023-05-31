@@ -9,12 +9,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppRoutingOne from './AppRoutingOne';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"></link>
-    <App />
+    {/* <App/> */}
+    <AppRoutingOne/>
   </React.StrictMode>
 );
 

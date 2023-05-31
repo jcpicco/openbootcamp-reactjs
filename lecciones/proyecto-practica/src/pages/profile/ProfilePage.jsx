@@ -2,15 +2,11 @@ import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
-const HomePage = () => {
+const ProfilePage = ({ user }) => {
     const location = useLocation();
     const history = useHistory();
 
     console.log(`We are in Route: ${location.pathname}`);
-
-    const navigateTo = (path) => {
-        history.push(path);
-    }
 
     const goBack = () => {
         history.goBack();
@@ -23,10 +19,7 @@ const HomePage = () => {
 
     return (
         <div>
-            <h1>Home Page</h1>
-            <button onClick={ () => navigateTo('/profile') }>
-                Go to profile
-            </button>
+            <h1>Your profile</h1>
             <button onClick={ goBack }>
                 Go Back
             </button>
@@ -38,4 +31,4 @@ const HomePage = () => {
 }
 
 
-export default HomePage;
+export default ProfilePage;

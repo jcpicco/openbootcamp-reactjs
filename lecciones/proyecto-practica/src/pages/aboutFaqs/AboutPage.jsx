@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
-const HomePage = () => {
+const AboutPage = () => {
     const location = useLocation();
     const history = useHistory();
 
@@ -23,19 +23,23 @@ const HomePage = () => {
 
     return (
         <div>
-            <h1>Home Page</h1>
-            <button onClick={ () => navigateTo('/profile') }>
-                Go to profile
-            </button>
-            <button onClick={ goBack }>
-                Go Back
-            </button>
-            <button onClick={ goForward }>
-                Go Forward
-            </button>
+            <h1>
+                About | FAQs
+            </h1>
+            <div>
+                <button onClick={ () => navigateTo('/') }>
+                    Go To Home
+                </button>
+                <button onClick={ goBack }>
+                    Go Back
+                </button>
+                <button onClick={ goForward }>
+                    Go Forward
+                </button>
+            </div>
         </div>
     );
 }
 
 
-export default HomePage;
+export default AboutPage;
