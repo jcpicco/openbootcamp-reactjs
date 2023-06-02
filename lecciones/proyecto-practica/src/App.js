@@ -12,7 +12,7 @@ import Greetingstyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import LoginFormik from './components/pure/forms/loginFormik';
-import Registerformik from './components/pure/forms/registerFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 /* eslint-enable */
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
       {/* Ejemplos de renderizado condicional */}
       {/* <OptionalRender></OptionalRender> */}
       {/* <Loginformik></Loginformik> */}
-      {/* <Registerformik></Registerformik> */}
+      {/* <RegisterFormik></RegisterFormik> */}
     </div>
   );
 }

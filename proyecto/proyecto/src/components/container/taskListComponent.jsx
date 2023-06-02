@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import TaskComponent from '../pure/taskComponent';
 import TaskFormik from '../pure/forms/taskFormik';
+import { useHistory } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 // Models
 import { Task } from '../../models/task.class';
@@ -108,6 +110,13 @@ const TaskListComponent = () => {
         fontWeight: 'bold'
     };
 
+    const history = useHistory();
+
+    const logout = () => {
+        localStorage.removeItem('credentials');
+        history.push('/login');
+    }
+
     
     return (
         <div className='col-12'>
@@ -125,6 +134,8 @@ const TaskListComponent = () => {
                 </div>
             </div>
             <TaskFormik add={ addTask } length={ tasks.length }></TaskFormik>
+            <hr/>
+            <Button variant="contained" onClick={ logout }>Logout</Button>
         </div>
     );
 };

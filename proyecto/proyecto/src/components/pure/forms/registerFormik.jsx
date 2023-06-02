@@ -1,46 +1,52 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { Button } from '@mui/material';
 
 // Models
-import { ROLES } from '../../../models/roles.enum';
-import { User } from '../../../models/user.class';
+import { Contact } from '../../../models/contact.class';
 
 
 const RegisterFormik = () => {
-    let user = new User();
+    let contact = new Contact();
+
+    const history = useHistory();
+
+    const login = () => {
+        history.push('/login');
+    }
 
     const initialValues = {
-        username: '',
+        name: '',
+        lastName: '',
         email: '',
         password: '',
-        confirm: '', // to confirm password
-        role: ROLES.USER
+        confirm: '' // to confirm password
     }
 
     const registerSchema = Yup.object().shape({
-            username: Yup.string()
-                .min(6, 'Username too short')
-                .max(12, 'Username too long')
-                .required('Username is required'),
-            email: Yup.string()
-                .email('Invalid email format')
-                .required('Email is required'),
-            role: Yup.string()
-                .oneOf([ROLES.USER, ROLES.ADMIN], 'You must select a Role: User / Admin')
-                .required('Role is required'),
-            password: Yup.string()
-                .min(8, 'Password too short')
-                .required('Password is required'),
-            confirm: Yup.string()
-                .when("password", {
-                    is: value => (value && value.length > 0 ? true : false),
-                    then: () => Yup.string().oneOf(
-                        [Yup.ref("password")],
-                        '¡Passwords must match!'
-                    )
-                }).required('You must confirm the password')
-        });
+        name: Yup.string()
+            .max(32, 'Name too long')
+            .required('Name is required'),
+        lastName: Yup.string()
+            .max(64, 'Last Name too long')
+            .required('Last Name is required'),
+        email: Yup.string()
+            .email('Invalid email format')
+            .required('Email is required'),
+        password: Yup.string()
+            .min(8, 'Password too short')
+            .required('Password is required'),
+        confirm: Yup.string()
+            .when("password", {
+                is: value => (value && value.length > 0 ? true : false),
+                then: () => Yup.string().oneOf(
+                    [Yup.ref("password")],
+                    '¡Passwords must match!'
+                )
+            }).required('You must confirm the password')
+    });
 
     const submit = (values) => {
         alert('Register user')
@@ -57,7 +63,8 @@ const RegisterFormik = () => {
                 // ** onSubmit Event
                 onSubmit={async (values) => {
                     await new Promise((r) => setTimeout(r, 1000));
-                    alert(JSON.stringify(values, null, 2))
+                    alert(JSON.stringify(values, null, 2));
+                    history.push('/login');
                 }}
             >
 
@@ -68,14 +75,25 @@ const RegisterFormik = () => {
                     handleChange,
                     handleBlur }) => (
                         <Form>
-                            <label htmlFor="username">Username</label>
-                            <Field id="username" type="text" name="username" placeholder="Your username" />
+                            <label htmlFor="name">Name</label>
+                            <Field id="name" type="text" name="name" placeholder="Your name" />
                             
-                            {/* Username Errors */}
+                            {/* name Errors */}
                             {
-                                errors.username && touched.username && 
+                                errors.name && touched.name && 
                                 (
-                                    <ErrorMessage name="username" component='div'></ErrorMessage>
+                                    <ErrorMessage name="name" component='div'></ErrorMessage>
+                                )
+                            }
+                            
+                            <label htmlFor="lastName">Last name</label>
+                            <Field id="lastName" type="text" name="lastName" placeholder="Your last name" />
+                            
+                            {/* lastName Errors */}
+                            {
+                                errors.lastName && touched.lastName && 
+                                (
+                                    <ErrorMessage name="lastName" component='div'></ErrorMessage>
                                 )
                             }
 
@@ -114,12 +132,12 @@ const RegisterFormik = () => {
 
                             <button type="submit">Register Account</button>
                             {isSubmitting ? (<p>Sending your credentials...</p>): null}
-
                         </Form>
                     )
             }
-
             </Formik>
+            <hr/>
+            <Button variant="contained" onClick={ login }>Login</Button>
         </div>
     );
 }
