@@ -1,0 +1,10 @@
+En Javascript la palabra async es para gestionar la sincronía y await es para esperar a líneas de código que se ejecuten.
+
+Las Promise pueden pasar a estados:
+- SETTLED: Cuando se completa correctamente. Se ejecuta el then(), que significa que todo ha ido OK, y se ejecuta código para la Promise lista y resuelta.
+- ERROR: Cuando no se ha podido completar. Se ejecuta el catch(), que significa que ha habido error, y se ejecuta código para gestionar el error.
+
+Finally en las Promise se ejecuta SIEMPRE. Puede devolver otra promesa o ejecutar algún código.
+
+$npm install --save rxjs
+Es una cola con push, la cual es escuchada por componentes de la web en React.

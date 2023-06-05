@@ -13,6 +13,9 @@ import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
+import AsyncExample from './components/pure/AsyncExample';
+import ObservableExample from './components/pure/ObservableExample';
+import FetchExample from './components/pure/FetchExample';
 /* eslint-enable */
 
 function App() {
@@ -24,8 +27,6 @@ function App() {
         {/* <GreetingClass name="Juanma"></Greeting> */}
         {/* Componente propio greetingFunction.jsx con propiedades */}
         {/* <GreetingFunction name="Juanma"></GreetingFunction> */}
-        {/* Componente lista de tasks */}
-        {/* <TaskListComponent></TaskListComponent> */}
         {/* Ejemplos de uso de HOOKS */}
         {/* <ExampleUseState></ExampleUseState> */}
         {/* <ExampleVariousUse></ExampleVariousUse> */}
@@ -44,6 +45,13 @@ function App() {
       {/* <OptionalRender></OptionalRender> */}
       {/* <Loginformik></Loginformik> */}
       {/* <RegisterFormik></RegisterFormik> */}
+      {/* Ejemplos de procesos asíncronos */}
+      {/* <AsyncExample></AsyncExample> */}
+      {/* <ObservableExample></ObservableExample> */}
+      <FetchExample></FetchExample>
+      
+      {/* Componente lista de tasks */}
+      {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }

@@ -1,0 +1,4 @@
+Usaremos https://reqres.in/
+
+Fetch tiene por defecto las peticiones GET.
+Siempre deberían gestionarse las response correctas e incorrectas en el servicio, y no en el componente.
