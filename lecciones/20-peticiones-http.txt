@@ -1,4 +1,7 @@
-Usaremos https://reqres.in/
+Usaremos https://reqres.in/ y https://randomuser.me/
 
 Fetch tiene por defecto las peticiones GET.
 Siempre deberían gestionarse las response correctas e incorrectas en el servicio, y no en el componente.
+
+$npm install --save axios
+Podemos manejar errores, cancelar peticiones, controlar peticiones, generar esquemas, crear configuraciones por defecto, etc.

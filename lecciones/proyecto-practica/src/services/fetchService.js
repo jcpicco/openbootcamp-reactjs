@@ -1,5 +1,5 @@
 export const getAllUsers = async () => {
-    
+    // GET
     let response = await fetch('https://reqres.in/api/users');
     console.log('Response:', response);
     console.log('Status:', response.status);
@@ -30,4 +30,28 @@ export const getUserDetails = async (id) => {
 
     // We return the json
     return response.json()
+}
+
+export const login = async (email, password) => {
+    let body = {
+        email: email,
+        password: password
+    };
+
+    // POST
+    let response = await fetch('https://reqres.in/api/login', {
+        method: 'POST',
+        // mode: 'no-cors',
+        // credentials: 'omit',
+        // cache: 'no-cache',
+        // headers: {
+        //     'content-type': 'application/json'
+        // },
+        body: JSON.stringify(body)
+    });
+    console.log('Response:', response);
+    console.log('Status:', response.status);
+    console.log('OK?', response.ok);
+
+    return response.json();
 }
