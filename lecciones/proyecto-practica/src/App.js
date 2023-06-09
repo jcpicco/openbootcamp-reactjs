@@ -17,6 +17,7 @@ import AsyncExample from './components/pure/AsyncExample';
 import ObservableExample from './components/pure/ObservableExample';
 import FetchExample from './components/pure/FetchExample';
 import AxiosExample from './components/pure/AxiosExample';
+import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
 /* eslint-enable */
 
 function App() {
@@ -50,7 +51,8 @@ function App() {
       {/* <AsyncExample></AsyncExample> */}
       {/* <ObservableExample></ObservableExample> */}
       {/* <FetchExample></FetchExample> */}
-      <AxiosExample></AxiosExample>
+      {/* <AxiosExample></AxiosExample> */}
+      <AxiosCRUDExample></AxiosCRUDExample>
       
       {/* Componente lista de tasks */}
       {/* <TaskListComponent></TaskListComponent> */}
