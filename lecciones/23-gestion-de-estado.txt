@@ -1,0 +1,53 @@
+$npm install --save-dev @redux-devtools/extension
+Sirve para ver los cambios de estado dentro del propio navegador. Tiene varias partes:
+- Store: Guarda info persistente.
+- Root Reducer: Indica las funciones que cumplen los objetos de la info persistente.
+- Actions: Objetos con tipo y payload.
+
+Componente A despacha una Action, esta acción la escucha el Root Reducer, y genera un nuevo estado de la info de Store para que componente B actualice su vista.
+
+Hay dos plantillas: rfcredux y rfcreduxp.
+
+Mediante los containers se conectan las actions con las funcionalidades de los componentes (Connect()).
+
+$npm install --save redux-saga
+Sirve para añadir estados globales asíncronos. Es un middleware (saga) que tiene un watcher esperando a ciertas acciones, y cuando llegan estas acciones ocurren cosas con un worker.
+
+----------------------------------------------
+PASOS PARA CREAR SISTEMA DE GESTIÓN DE ESTADOS
+----------------------------------------------
+0. src/...
+
+1. store/actions/actions.js -> Se crean las ACTIONS que se van a realizar con su payload correspondiente. Cada acción es una función flecha con payload y type.
+
+2. store/reducers/nameReducer.js -> Se crean los REDUCERS, que contienen los cambios de estado al llamarse las ACTIONS definidas anteriormente.
+
+3. store/reducers/RootReducer.js -> Con la función combineReducers() junta todos los REDUCERS que tengamos en la plataforma. Es un array con { nameState: nameReducer }.
+
+4. pure/name.jsx -> Se crea un componente para gestionar sus estados. Sus argumentos (variables o funciones) se gestionarán en el siguiente paso.
+
+5. components/containers/nameContainer.jsx -> Se crea el CONTAINER, con las funciones mapStateToProps() (refleja las actualizaciones del STORE de Redux, usando los argumentos variable del componente) y mapDispatchToProps() (ejecuta las ACTIONS asignadas a los argumentos función del componente). Finalmente se conectan estas dos funciones con el componente.
+
+6. store/config/storeConfig.js -> Se crea el STORE creando una función llamada createAppStore, y devolvemos la función createStore(), a la que le pasamos rootReducer y composeWithDevTools(), lo cual hace el retup de Redux para que podamos ver la info en nuestro navegador en las Dev Tools.
+
+7. ../App.js -> Se añaden los container que queramos mostrar.
+
+8. ../index.js -> Se inicializa el STORE almacenando en la variable appStore la llamada a createAppStore(), y en el render se añade <Provider store={ appStore }> . . . <Provider/>. Finalmente todo el código se escribe dentro de Provider.
+
+---------------------------------------
+PASOS PARA GESTIÓN ASÍNCRONA DE ESTADOS
+---------------------------------------
+0. src/... -> Mismos pasos que el otro pero con un poco más.
+
+1. store/sagas/sagas.js -> Se crean métodos watcherSaga() (se hace yield de takeLatest(), que activa la saga en el background para las acciones que cumplan un patrón, y llama al workerSaga()), y workerSaga() (se saca la response con yield call() y la función, y hace yield put() con el resultado correcto o incorrecto).
+
+6. store/config/storeConfig.js -> Se crea el STORE creando una función llamada CreateAppAsyncStore(), se crea el middleware con const sagaMiddleware = createSagaMiddleware(), y en el createStore() se necesita usar estos argumentos SIEMPRE:
+    let store = createStore(
+        rootReducer,
+        compose(
+            applyMiddleware(sagaMiddleware), 
+            composeWithDevTools()
+        )
+    );
+
+    Finalmente se llama a sagaMiddleware.run(watcherSaga); para inicializar el watcher.

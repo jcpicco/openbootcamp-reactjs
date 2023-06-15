@@ -17,8 +17,10 @@
     "formik": "^2.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.1.0",
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
+    "redux-saga": "^1.2.3",
     "sass": "^1.62.1",
     "web-vitals": "^2.1.4",
     "yup": "^1.2.0"
@@ -46,5 +48,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@redux-devtools/extension": "^3.2.5",
+    "redux": "^4.2.1"
   }
 }

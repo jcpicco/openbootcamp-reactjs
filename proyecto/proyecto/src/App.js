@@ -1,11 +1,14 @@
 /* eslint-disable */
 import logo from './logo.svg';
 import './App.css';
-import ContactCoreComponent from './components/container/ContactCoreComponent';
+import ContactCoreComponent from './components/containers/ContactCoreComponent';
 import Clock from './components/pure/clock';
 import MouseComponent from './components/pure/mouseComponent';
-import TaskListComponent from './components/container/taskListComponent';
+import TaskListComponent from './components/containers/taskListComponent';
 import ChuckNorris from './components/pure/ChuckNorris';
+import TodosContainer from './components/containers/TodoContainer';
+import TodoFormContainer from './components/containers/TodoFormContainer';
+import Filteroptions from './components/pure/FilterOptions';
 /* eslint-enable */
 
 function App() {
@@ -23,7 +26,11 @@ function App() {
       {/* </header> */}
       {/* <MouseComponent></MouseComponent> */}
       {/* <TaskListComponent></TaskListComponent> */}
-      <ChuckNorris></ChuckNorris>
+      {/* <ChuckNorris></ChuckNorris> */}
+      <TodosContainer></TodosContainer>
+      <TodoFormContainer></TodoFormContainer>
+      {/* Filter Options contain Filter Container */}
+      <Filteroptions></Filteroptions>
     </div>
   );
 }

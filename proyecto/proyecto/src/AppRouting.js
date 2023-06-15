@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-ro
 import NotFoundPage from './pages/404/NotFoundPage';
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
-import TaskListComponent from './components/container/taskListComponent';
+import TaskListComponent from './components/containers/taskListComponent';
 
 
 function AppRouting() {
