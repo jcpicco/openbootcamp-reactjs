@@ -1,4 +1,4 @@
-$npm install --save-dev @redux-devtools/extension
+$npm install --save-dev react-redux @redux-devtools/extension
 Sirve para ver los cambios de estado dentro del propio navegador. Tiene varias partes:
 - Store: Guarda info persistente.
 - Root Reducer: Indica las funciones que cumplen los objetos de la info persistente.
