@@ -1,0 +1,9 @@
+1. Creamos unas tareas y se crea un contexto con React.createContext().
+
+2. Creamos dentro de otro componente un estado inicial, y una función reducer con argumentos state y action (state es el estado a actualizar y action es el payload que nos llega). esto va a crear la funcionalidad de los distintos tipos de tareas que asignemos.
+
+3. usamos useReducer() para crear un estado con su funcionalidad y estado inicial.
+
+4. En el Redux empezamos con <myContext.Provider value={ state }> para pasarle un estado con el que trabajar. En cada boton añadimos una función flecha dispatch() que tiene en un objeto el type (tipo anterior de tarea, la cual hemos especificado), y una payload.
+
+5. Opcionalmente, el contexto anterior se lo asignamos a un estado dentro de un componente que creemos para que este pueda tener la información que tenemos. Usamos useContext().
