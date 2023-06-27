@@ -7,3 +7,5 @@
 4. En el Redux empezamos con <myContext.Provider value={ state }> para pasarle un estado con el que trabajar. En cada boton añadimos una función flecha dispatch() que tiene en un objeto el type (tipo anterior de tarea, la cual hemos especificado), y una payload.
 
 5. Opcionalmente, el contexto anterior se lo asignamos a un estado dentro de un componente que creemos para que este pueda tener la información que tenemos. Usamos useContext().
+
+La ventaja de useReducer y useContext es que la información compartida está gestionada ÚNICAMENTE por los reducers, y con useState se actualiza en cualquier momento bajo cualquier circunstancia la información sin ningún control previo.

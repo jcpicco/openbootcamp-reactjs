@@ -9,6 +9,7 @@ import ChuckNorris from './components/pure/ChuckNorris';
 import TodosContainer from './components/containers/TodoContainer';
 import TodoFormContainer from './components/containers/TodoFormContainer';
 import Filteroptions from './components/pure/FilterOptions';
+import TaskListReducerComponent from './components/containers/TaskListReducerComponent';
 /* eslint-enable */
 
 function App() {
@@ -27,10 +28,11 @@ function App() {
       {/* <MouseComponent></MouseComponent> */}
       {/* <TaskListComponent></TaskListComponent> */}
       {/* <ChuckNorris></ChuckNorris> */}
-      <TodosContainer></TodosContainer>
-      <TodoFormContainer></TodoFormContainer>
+      {/* <TodosContainer></TodosContainer>
+      <TodoFormContainer></TodoFormContainer> */}
       {/* Filter Options contain Filter Container */}
-      <Filteroptions></Filteroptions>
+      {/* <Filteroptions></Filteroptions> */}
+      <TaskListReducerComponent></TaskListReducerComponent>
     </div>
   );
 }

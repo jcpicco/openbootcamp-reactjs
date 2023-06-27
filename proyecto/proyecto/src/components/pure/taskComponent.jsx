@@ -11,10 +11,10 @@ import '../../styles/task.scss';
 
 const TaskComponent = ({ task, complete, remove }) => {
     useEffect(() => {
-        console.log('Created task');
+        // console.log('Created task');
 
         return () => {
-            console.log(`Task: ${task.name} is going to unmount`)
+            // console.log(`Task: ${task.name} is going to unmount`);
         };
     }, [task]);
 
