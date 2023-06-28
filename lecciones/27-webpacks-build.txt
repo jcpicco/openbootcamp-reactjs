@@ -8,7 +8,7 @@ $npm install --save-dev html-webpack-plugin
 $npm install --save-dev source-map-loader
 $npm install --save-dev documentation
 $npm install --save-dev file-loader
-$npm install --save-dev eslint
+$npm install --save-dev eslint eslint-loader
 
 En package.json aparecen las dependencias y las dependencias dev. Si borramos node_modules y borramos las dependencias hemos borrado las librerías del proyecto. Nos interesa guardar en dependencias de desarrollo.
 
@@ -26,3 +26,5 @@ $eslint --init nos permitirá hacer setup de eslint.
 
 Las variables de entorno son declaradas en el entorno como si fueran declaradas en archivos .js, pero son accedidas en el momento de la build y son globales. Se guardan en los archivos .env, y sin nada más ese es el por defecto. Si especificamos .env.{entorno}, estamos especificando que las variables de entorno siguientes son de un entorno concreto. Se pueden acceder en código, por ejemplo "NODE_ENV.BASE_URL".
 
+https://app.netlify.com
+Web que nos permite generar sitios a partir de git como configuraciones e integraciones con git. Podemos registrar dominios, pueden añadirse plugins y publicar proyectos completos.

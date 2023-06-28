@@ -1,13 +1,16 @@
 import React from 'react';
+import Tasklist from './lists/TaskList';
+// import Settings from './settings/Settings';
 
 /**
- * Función anónima para crear un componente principal
- * @returns Componente principal de nuestra aplicación
+ * Función Anónima para crear un Componente principal
+ * @returns {React.Component} Componente principal de nuestra aplicación
  */
 function App() {
     return (
       <div>
-        <h1>Proyecto final</h1>
+        <Tasklist />
+        {/* <Settings /> */}
       </div>
     );
 }
