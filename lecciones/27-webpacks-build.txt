@@ -23,3 +23,6 @@ En .editorconfig ponemos configuración del editor.
 webpack.config.js nos permite configurar cómo vamos a empaquetar la build.
 
 $eslint --init nos permitirá hacer setup de eslint.
+
+Las variables de entorno son declaradas en el entorno como si fueran declaradas en archivos .js, pero son accedidas en el momento de la build y son globales. Se guardan en los archivos .env, y sin nada más ese es el por defecto. Si especificamos .env.{entorno}, estamos especificando que las variables de entorno siguientes son de un entorno concreto. Se pueden acceder en código, por ejemplo "NODE_ENV.BASE_URL".
+

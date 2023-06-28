@@ -1,9 +1,10 @@
+/* eslint-disable */
 const path = require('path');
 
 // Plugins y minificadores de CSS y SCSS/SASS
 // Para reducir el tamaño de las hojas de estilo en nuestro proyecto
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Para el template del HTML que va a usar Webpack
-const miniCssExtractPlugin = require('html-css-extract-plugin'); // Para reducir los CSS
+const miniCssExtractPlugin = require('mini-css-extract-plugin'); // Para reducir los CSS
 const { SourceMapDevToolPlugin } = require('webpack'); // Para conocer el Source Map de nuestro proyecto
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -42,7 +43,10 @@ module.exports = {
             {
                 test: /(\.js|\.jsx)$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                // TODO: Solucionar ERROR al hacer build
+                use: {
+                    loader: 'babel-loader'
+                },
                 query: {
                     presets: [
                         '@babel/env',
@@ -61,7 +65,7 @@ module.exports = {
             },
             // Reglas para los archivos de imágenes
             {
-                test: /\.(png|jpe?g|gif)$/,
+                test: /(\.png|\.jpe?g|\.gif)$/,
                 use: [
                     {
                         loader: 'file-loader'

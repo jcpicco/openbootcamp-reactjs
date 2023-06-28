@@ -9,8 +9,8 @@
     "lint:fix": "eslint --fix ./src",
     "dev": "webpack-dev-server --mode development --hot --open --content-based",
     "docs:build": "documentation build src/** -f html -o docs",
-    "build": "webpack",
-    "build:production": "webpack"
+    "build": "webpack --mode development",
+    "build:production": "webpack --mode production"
   },
   "author": "jcpicco",
   "license": "ISC",
